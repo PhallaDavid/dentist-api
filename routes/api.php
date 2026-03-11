@@ -63,6 +63,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::middleware('permission:manage-profile')->group(function () {
         Route::get('/profile', [AuthController::class, 'profile']);
         Route::put('/update-profile', [AuthController::class, 'updateprofile']);
+        Route::put('/change-password', [AuthController::class, 'changePassword']);
     });
 
     // Treatment management routes (authentication required)
